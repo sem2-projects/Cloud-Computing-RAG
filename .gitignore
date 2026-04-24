@@ -1,0 +1,26 @@
+# Frontend Dependencies
+node_modules/
+dist/
+.env
+.env.local
+/tmp
+
+# Backend/Lambda Dependencies & Artifacts
+*.zip
+__pycache__/
+lambda_functions/*/bin/
+lambda_functions/*/boto3/
+lambda_functions/*/boto3-*/
+lambda_functions/*/botocore/
+lambda_functions/*/botocore-*/
+lambda_functions/*/dateutil/
+lambda_functions/*/jmespath*/
+lambda_functions/*/python_dateutil*/
+lambda_functions/*/s3transfer*/
+lambda_functions/*/six*/
+lambda_functions/*/urllib3*/
+lambda_functions/*/__pycache__*
+lambda_functions/*/*.dist-info
+
+# OS Files
+.DS_Store
