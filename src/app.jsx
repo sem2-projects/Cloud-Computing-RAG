@@ -3,18 +3,15 @@ import { AlertCircle, Upload, Search, FileText, LogOut, Loader2 } from 'lucide-r
 
 const CONFIG = {
   cognito: {
-    userPoolId: 'us-east-1_aHK6pqEZj',
-    clientId: '613di8a74bt8soidh950ce1t9t',
+    userPoolId: 'us-east-1_aFeEesShu',
+    clientId: '5q11a2si4enhuh2cgf0827r792',
     region: 'us-east-1'
   },
   api: {
-    baseUrl: 'https://your-api-id.execute-api.us-east-1.amazonaws.com/prod'
+    baseUrl: 'https://a8136e7ff6.execute-api.us-east-1.amazonaws.com/prod'
   }
 };
-  api: {
-    baseUrl: 'https://your-api-id.execute-api.us-east-1.amazonaws.com/prod' // Replace with your API Gateway URL
-  }
-;
+  
 
 // =============================================================================
 // AWS Cognito Authentication Helper
@@ -147,10 +144,16 @@ export default function RAGApp() {
       const timer = setTimeout(() => {
         setError(null);
         setSuccess(null);
-      }, 5000);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [error, success]);
+
+  useEffect(() => {
+    if (user) {
+      handleFetchDocuments();
+    }
+  }, [user]);
 
   // =============================================================================
   // Authentication Handlers
@@ -227,6 +230,13 @@ export default function RAGApp() {
     setEmail('');
     setPassword('');
     setConfirmationCode('');
+
+    setQuery('');
+    setQueryResult(null);
+    setDocuments([]);
+    setSelectedFile(null);
+    setView('upload');
+
     setSuccess('Signed out successfully!');
   };
 
@@ -325,6 +335,7 @@ export default function RAGApp() {
       });
 
       setQueryResult(result);
+      setQuery('');
       setSuccess('Query completed successfully!');
     } catch (err) {
       setError(err.message || 'Query failed');
@@ -346,7 +357,7 @@ export default function RAGApp() {
       });
 
       setDocuments(result.documents || []);
-      setSuccess('Documents loaded successfully!');
+      // setSuccess('Documents loaded successfully!');
     } catch (err) {
       setError(err.message || 'Failed to load documents');
     } finally {
@@ -366,14 +377,14 @@ export default function RAGApp() {
           </h1>
 
           {error && (
-            <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded mb-4 flex items-start gap-2">
-              <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-              <span className="text-sm">{error}</span>
+            <div className="fixed top-5 right-5 z-50 bg-red-900/90 border border-red-500 text-red-200 px-6 py-4 rounded shadow-2xl flex items-center gap-2">
+              <AlertCircle className="w-5 h-5 flex-shrink-0" />
+              <span className="text-sm font-medium">{error}</span>
             </div>
           )}
 
           {success && (
-            <div className="bg-green-900/50 border border-green-500 text-green-200 px-4 py-3 rounded mb-4 text-sm">
+            <div className="fixed top-5 right-5 z-50 bg-green-900/90 border border-green-500 text-green-200 px-6 py-4 rounded shadow-2xl text-sm font-medium">
               {success}
             </div>
           )}
@@ -548,14 +559,14 @@ export default function RAGApp() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
         {error && (
-          <div className="bg-red-900/50 border border-red-500 text-red-200 px-4 py-3 rounded mb-6 flex items-start gap-2">
-            <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-            <span className="text-sm">{error}</span>
+          <div className="fixed top-5 right-5 z-50 bg-red-900/90 border border-red-500 text-red-200 px-6 py-4 rounded shadow-2xl flex items-center gap-2">
+            <AlertCircle className="w-5 h-5 flex-shrink-0" />
+            <span className="text-sm font-medium">{error}</span>
           </div>
         )}
 
         {success && (
-          <div className="bg-green-900/50 border border-green-500 text-green-200 px-4 py-3 rounded mb-6 text-sm">
+          <div className="fixed top-5 right-5 z-50 bg-green-900/90 border border-green-500 text-green-200 px-6 py-4 rounded shadow-2xl text-sm font-medium">
             {success}
           </div>
         )}
@@ -702,7 +713,7 @@ export default function RAGApp() {
                       <div>
                         <p className="text-white font-medium">{doc.filename}</p>
                         <p className="text-gray-400 text-sm">
-                          Uploaded: {new Date(doc.uploadedAt).toLocaleString()}
+                          Uploaded: {new Date(doc.uploadedAt * 1000).toLocaleString()}
                         </p>
                       </div>
                     </div>

@@ -21,6 +21,17 @@ lambda_functions/*/six*/
 lambda_functions/*/urllib3*/
 lambda_functions/*/__pycache__*
 lambda_functions/*/*.dist-info
+lambda_functions/*/pypdf/
+lambda_functions/*/pypdf*/
+
+lambda_functions/*/jose/
+lambda_functions/*/python_jose*/
+lambda_functions/*/cryptography*/
+lambda_functions/*/cffi*/
+lambda_functions/*/pycparser*/
 
 # OS Files
 .DS_Store
+
+# six.py compatibility library
+lambda_functions/**/six.py
