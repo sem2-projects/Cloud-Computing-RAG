@@ -3,7 +3,7 @@
 A fully serverless Retrieval-Augmented Generation (RAG) system built on AWS. Users authenticate, upload documents (PDF, DOCX, TXT), and ask natural language questions answered by AI grounded exclusively in their uploaded content.
 
 **GitHub Repository:** https://github.com/sem2-projects/Cloud-Computing-RAG  
-**Live Website:** https://YOUR_CLOUDFRONT_ID.cloudfront.net
+**Live Website:** https://d2dqj0m7kr4lcj.cloudfront.net
 
 ---
 
