@@ -1,11 +1,9 @@
 # Cloud Computing RAG System
 
-A fully serverless Retrieval-Augmented Generation (RAG) system built on AWS.
-Users authenticate, upload documents (PDF, DOCX, TXT), and ask natural language
-questions answered by AI — grounded exclusively in their uploaded content.
+A fully serverless Retrieval-Augmented Generation (RAG) system built on AWS. Users authenticate, upload documents (PDF, DOCX, TXT), and ask natural language questions answered by AI grounded exclusively in their uploaded content.
 
 **GitHub Repository:** https://github.com/sem2-projects/Cloud-Computing-RAG  
-**Live Demo:** https://YOUR_CLOUDFRONT_ID.cloudfront.net
+**Live Website:** https://YOUR_CLOUDFRONT_ID.cloudfront.net
 
 ---
 
@@ -22,6 +20,68 @@ study assistant, knowledge base querying.
 ---
 
 ## Architecture Diagram
+
+The diagram below shows the complete request flow. 
+
+```mermaid
+flowchart TD
+    User([User Browser])
+    CF[CloudFront\nHTTPS CDN]
+    S3F[S3\nReact Frontend]
+    CG[Cognito\nUser Auth + JWT]
+    AG[API Gateway\nREST API]
+    AU[λ rag-authorizer\nJWT validation]
+    UH[λ rag-upload-handler\nExtract · Chunk · Embed]
+    QH[λ rag-query-handler\nSearch · AI Answer]
+    LH[λ rag-list-handler\nList Documents]
+    S3D[S3\nDocument Storage]
+    DB[(DynamoDB\nVectors + Metadata)]
+    BT[Bedrock Titan\nEmbeddings]
+    BC[Claude Haiku 4.5\nAI Generation]
+    CW[CloudWatch\nLogs + Error Alerts]
+
+    User -->|HTTPS| CF
+    CF -->|serves| S3F
+    User -->|login / signup| CG
+    CG -->|JWT token| User
+    User -->|API request + JWT| AG
+    AG -->|validate token| AU
+    AU -->|verified| AG
+    AG -->|POST /upload| UH
+    AG -->|POST /query| QH
+    AG -->|GET /documents| LH
+
+    UH -->|store file| S3D
+    UH -->|generate vectors| BT
+    UH -->|store vectors| DB
+
+    QH -->|embed question| BT
+    QH -->|similarity search| DB
+    QH -->|generate answer| BC
+
+    LH -->|fetch metadata| DB
+
+    UH -->|logs| CW
+    QH -->|logs| CW
+    LH -->|logs| CW
+    AU -->|logs| CW
+
+    style CW fill:#f5f5f5,stroke:#999
+    style DB fill:#f5f5f5,stroke:#999
+```
+
+**Upload flow:** User → CloudFront → API Gateway → λ authorizer validates JWT
+→ rag-upload-handler extracts text → chunks into 500-word segments
+→ Bedrock Titan generates embeddings → stored in DynamoDB + S3
+
+**Query flow:** User question → API Gateway → rag-query-handler embeds question
+→ cosine similarity search against DynamoDB vectors → top 5 chunks
+sent to Claude Haiku → grounded answer returned with source citations
+
+**Observability:** All Lambda functions log to CloudWatch.
+Error alarms notify via SNS email when any function fails.
+
+
 
 ## AWS Services Used
 
