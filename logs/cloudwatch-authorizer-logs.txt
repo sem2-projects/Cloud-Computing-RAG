@@ -1,0 +1,48 @@
+INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: d3ee2806-3c38-41f8-acc1-51a7ab2f3ca7 Version: $LATEST
+	[DEBUG] Token prefix: eyJraWQiOiJJempEamVLTngyVXdxYl...
+	[DEBUG] Method ARN: arn:aws:execute-api:us-east-1:226557653557:a8136e7ff6/prod/GET/documents
+	[DEBUG] Got 2 public keys from Cognito
+	[DEBUG] Token kid: IzjDjeKNx2Uwqb/zO6lxnpZ6dFeaLa/R/HaNJJMe8Yk=
+	[DEBUG] Claims aud: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] Claims exp: 1777394734 vs now: 1777425884
+	[DEBUG] Expected client_id: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] DENY — token expired
+	END RequestId: d3ee2806-3c38-41f8-acc1-51a7ab2f3ca7
+	REPORT RequestId: d3ee2806-3c38-41f8-acc1-51a7ab2f3ca7	Duration: 593.57 ms	Billed Duration: 937 ms	Memory Size: 128 MB	Max Memory Used: 63 MB	Init Duration: 343.04 ms	
+	START RequestId: 23bebb94-4f2f-4e0a-9fa1-432b0d3e778b Version: $LATEST
+	[DEBUG] Token prefix: eyJraWQiOiJJempEamVLTngyVXdxYl...
+	[DEBUG] Method ARN: arn:aws:execute-api:us-east-1:226557653557:a8136e7ff6/prod/GET/documents
+	[DEBUG] Got 2 public keys from Cognito
+	[DEBUG] Token kid: IzjDjeKNx2Uwqb/zO6lxnpZ6dFeaLa/R/HaNJJMe8Yk=
+	[DEBUG] Claims aud: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] Claims exp: 1777429639 vs now: 1777426039
+	[DEBUG] Expected client_id: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] ALLOW — user: test@gmail.com
+	END RequestId: 23bebb94-4f2f-4e0a-9fa1-432b0d3e778b
+	REPORT RequestId: 23bebb94-4f2f-4e0a-9fa1-432b0d3e778b	Duration: 52.24 ms	Billed Duration: 53 ms	Memory Size: 128 MB	Max Memory Used: 63 MB	
+	INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: debca122-a148-448f-ae5f-6a98d315e3a6 Version: $LATEST
+	[DEBUG] Token prefix: eyJraWQiOiJJempEamVLTngyVXdxYl...
+	[DEBUG] Method ARN: arn:aws:execute-api:us-east-1:226557653557:a8136e7ff6/prod/GET/documents
+	[DEBUG] Got 2 public keys from Cognito
+	[DEBUG] Token kid: IzjDjeKNx2Uwqb/zO6lxnpZ6dFeaLa/R/HaNJJMe8Yk=
+	[DEBUG] Claims aud: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] Claims exp: 1777430126 vs now: 1777426528
+	[DEBUG] Expected client_id: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] ALLOW — user: test@gmail.com
+	END RequestId: debca122-a148-448f-ae5f-6a98d315e3a6
+	REPORT RequestId: debca122-a148-448f-ae5f-6a98d315e3a6	Duration: 442.88 ms	Billed Duration: 859 ms	Memory Size: 128 MB	Max Memory Used: 62 MB	Init Duration: 415.67 ms	
+	INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: d84185fd-a0c5-4f57-bf57-0f736ba1f7b4 Version: $LATEST
+	[DEBUG] Token prefix: eyJraWQiOiJJempEamVLTngyVXdxYl...
+	[DEBUG] Method ARN: arn:aws:execute-api:us-east-1:226557653557:a8136e7ff6/prod/POST/upload
+	[DEBUG] Got 2 public keys from Cognito
+	[DEBUG] Token kid: IzjDjeKNx2Uwqb/zO6lxnpZ6dFeaLa/R/HaNJJMe8Yk=
+	[DEBUG] Claims aud: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] Claims exp: 1777430126 vs now: 1777426877
+	[DEBUG] Expected client_id: 5q11a2si4enhuh2cgf0827r792
+	[DEBUG] ALLOW — user: test@gmail.com
+	END RequestId: d84185fd-a0c5-4f57-bf57-0f736ba1f7b4
+	REPORT RequestId: d84185fd-a0c5-4f57-bf57-0f736ba1f7b4	Duration: 542.28 ms	Billed Duration: 957 ms	Memory Size: 128 MB	Max Memory Used: 62 MB	Init Duration: 414.68 ms	
+

@@ -1,0 +1,10 @@
+INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: 7fc7cbd7-3aa9-46f2-aa54-6c390ddf48ec Version: $LATEST
+	[INFO] Upload request from test@gmail.com
+	[INFO] Processing: Assignment3_FINAL_Rahmatikamel.pdf | ID: 4f7342f9731ae17c920bedfb3ea7d877
+	[INFO] Extracted 44284 characters
+	[INFO] Split into 11 chunks
+	[INFO] Stored 11 chunks
+	END RequestId: 7fc7cbd7-3aa9-46f2-aa54-6c390ddf48ec
+	REPORT RequestId: 7fc7cbd7-3aa9-46f2-aa54-6c390ddf48ec	Duration: 7186.49 ms	Billed Duration: 8539 ms	Memory Size: 512 MB	Max Memory Used: 121 MB	Init Duration: 1351.59 ms	
+

@@ -1,0 +1,18 @@
+INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: bd175d75-7cd2-4d61-be02-40c7c9e6c978 Version: $LATEST
+	END RequestId: bd175d75-7cd2-4d61-be02-40c7c9e6c978
+	REPORT RequestId: bd175d75-7cd2-4d61-be02-40c7c9e6c978	Duration: 163.18 ms	Billed Duration: 1120 ms	Memory Size: 256 MB	Max Memory Used: 89 MB	Init Duration: 955.99 ms	
+	START RequestId: 186c4c17-221e-4930-89e8-d2add11dbaa5 Version: $LATEST
+	END RequestId: 186c4c17-221e-4930-89e8-d2add11dbaa5
+	REPORT RequestId: 186c4c17-221e-4930-89e8-d2add11dbaa5	Duration: 19.50 ms	Billed Duration: 20 ms	Memory Size: 256 MB	Max Memory Used: 90 MB	
+	INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: 90ac7541-fcda-43f4-8f35-e776dbf9272c Version: $LATEST
+	END RequestId: 90ac7541-fcda-43f4-8f35-e776dbf9272c
+	REPORT RequestId: 90ac7541-fcda-43f4-8f35-e776dbf9272c	Duration: 177.58 ms	Billed Duration: 1210 ms	Memory Size: 256 MB	Max Memory Used: 89 MB	Init Duration: 1031.87 ms	
+	START RequestId: d94574ea-2e3b-4d1e-915e-1c757553370d Version: $LATEST
+	END RequestId: d94574ea-2e3b-4d1e-915e-1c757553370d
+	REPORT RequestId: d94574ea-2e3b-4d1e-915e-1c757553370d	Duration: 29.53 ms	Billed Duration: 30 ms	Memory Size: 256 MB	Max Memory Used: 90 MB	
+	START RequestId: c52c1882-44e8-4c23-9501-3806cf69686c Version: $LATEST
+	END RequestId: c52c1882-44e8-4c23-9501-3806cf69686c
+	REPORT RequestId: c52c1882-44e8-4c23-9501-3806cf69686c	Duration: 97.48 ms	Billed Duration: 98 ms	Memory Size: 256 MB	Max Memory Used: 90 MB	
+

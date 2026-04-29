@@ -1,0 +1,28 @@
+INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: 333ef4ac-3c45-4807-9bc9-17827c29e7ca Version: $LATEST
+	[INFO] Query from test@gmail.com: What is AWS?
+	[INFO] Found 4 chunks
+	[INFO] Top score: 0.6442
+	END RequestId: 333ef4ac-3c45-4807-9bc9-17827c29e7ca
+	REPORT RequestId: 333ef4ac-3c45-4807-9bc9-17827c29e7ca	Duration: 1513.66 ms	Billed Duration: 2525 ms	Memory Size: 512 MB	Max Memory Used: 94 MB	Init Duration: 1011.03 ms	
+	START RequestId: 8a7003a0-d7ae-4e8e-aadb-0e81341eec3e Version: $LATEST
+	[INFO] Query from test@gmail.com: What is cloud computing?
+	[INFO] Found 4 chunks
+	[INFO] Top score: 0.7265
+	END RequestId: 8a7003a0-d7ae-4e8e-aadb-0e81341eec3e
+	REPORT RequestId: 8a7003a0-d7ae-4e8e-aadb-0e81341eec3e	Duration: 1702.44 ms	Billed Duration: 1703 ms	Memory Size: 512 MB	Max Memory Used: 95 MB	
+	INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: 2daa27e7-7c9e-4a87-9503-1e4db304f582 Version: $LATEST
+	[INFO] Query from test@gmail.com: What is AWS used for?
+	[INFO] Found 4 chunks
+	[INFO] Top score: 0.6664
+	END RequestId: 2daa27e7-7c9e-4a87-9503-1e4db304f582
+	REPORT RequestId: 2daa27e7-7c9e-4a87-9503-1e4db304f582	Duration: 2177.92 ms	Billed Duration: 3167 ms	Memory Size: 512 MB	Max Memory Used: 93 MB	Init Duration: 988.52 ms	
+	INIT_START Runtime Version: python:3.14.v39	Runtime Version ARN: arn:aws:lambda:us-east-1::runtime:06dae9ab05ccfc05b6ef62a6c3f8c3976f2962ec872732763a914c0041151809
+	START RequestId: a3fc6744-1a45-4192-9706-642a843d2d5f Version: $LATEST
+	[INFO] Query from test@gmail.com: What is POGOH?
+	[INFO] Found 15 chunks
+	[INFO] Top score: 0.3270
+	END RequestId: a3fc6744-1a45-4192-9706-642a843d2d5f
+	REPORT RequestId: a3fc6744-1a45-4192-9706-642a843d2d5f	Duration: 2234.93 ms	Billed Duration: 3208 ms	Memory Size: 512 MB	Max Memory Used: 101 MB	Init Duration: 972.31 ms	
+
