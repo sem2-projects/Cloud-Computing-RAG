@@ -148,6 +148,29 @@ Cloud-Computing-RAG/
 └── README.md
 ```
 
+---
+
+## Observability
+
+CloudWatch is used for logging, monitoring, and alerting across all Lambda functions.
+
+**Log groups**: automatically created per function:
+- `/aws/lambda/rag-upload-handler`
+- `/aws/lambda/rag-query-handler`
+- `/aws/lambda/rag-list-handler`
+- `/aws/lambda/rag-authorizer`
+
+**Structured logging**: every function logs JSON entries to CloudWatch
+including user ID, operation type, document names, similarity scores,
+and error details. Queryable via CloudWatch Logs Insights.
+
+**Error alarms**: CloudWatch metric alarms trigger SNS email
+notifications when any Lambda function throws an error.
+Threshold: ≥1 error per 60-second window.
+
+**Dashboard**: a CloudWatch dashboard tracks invocation count,
+error rate, and average duration per function in real time.
+
 ## Team Contributions
 
 | Person | Role | Responsibilities |
